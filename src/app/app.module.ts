@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { NbBootstrapModalModule } from '../@netbiis/src/nb-bootstrap-modal/nb-bootstrap-modal.module';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NbBootstrapModalModule,
+    NgbModule.forRoot(),
+    NgbModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

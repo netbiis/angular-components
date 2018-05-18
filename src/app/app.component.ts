@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NbBootstrapModalComponent } from '../@netbiis/src/nb-bootstrap-modal/nb-bootstrap-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  @ViewChild(NbBootstrapModalComponent) modal: NbBootstrapModalComponent;
+
+  click() {
+    this.modal.open();
+    this.modal.close();
+  }
 }

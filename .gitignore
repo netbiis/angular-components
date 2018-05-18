@@ -42,3 +42,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/dist.tgz
+/.ng_pkg_build/nb-bootstrap-modal/out
+/.ng_pkg_build/nb-bootstrap-modal/stage/bundles
+/.ng_pkg_build/nb-bootstrap-modal/stage/esm2015
+/.ng_pkg_build/nb-bootstrap-modal/stage/esm5
