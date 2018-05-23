@@ -1,5 +1,6 @@
+import { NbBootstrapModalComponent } from '../@netbiis/nb-bootstrap-modal/nb-bootstrap-modal.component';
 import { Component, ViewChild } from '@angular/core';
-import { NbBootstrapModalComponent } from '../@netbiis/src/nb-bootstrap-modal/nb-bootstrap-modal.component';
+import { DateParts } from '../@netbiis/nb-datepicker/date-parts';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,17 @@ import { NbBootstrapModalComponent } from '../@netbiis/src/nb-bootstrap-modal/nb
 })
 export class AppComponent {
   title = 'app';
+  datePartsValues: DateParts[] = [];
+  dateValues: Date[] = [];
+  numberValue: number;
 
   @ViewChild(NbBootstrapModalComponent) modal: NbBootstrapModalComponent;
 
-  click() {
-    this.modal.open();
-    this.modal.close();
+  datePickerChanged(value: DateParts, index: number) {
+    this.datePartsValues[index] = value;
+  }
+
+  dateValueChanged(date: Date, index: number) {
+    this.dateValues[index] = date;
   }
 }
